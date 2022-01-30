@@ -53,4 +53,3 @@ const number=1000;
 Math.floor(number/3);
 //文字列へ変換する
 number.toString();
-//全探索の方法for()配列の中の要素を足し合わせたり
