@@ -37,6 +37,33 @@ const reducer = (previousValue, currentValue) => previousValue + currentValue;
 arr2.reduce(reducer, [a])
 
 
+//降順にソートする
+function compareFunc(a, b) {
+  return b - a;
+}
+ 
+var num = [5, 3, 10, 6, 55];
+num.sort(compareFunc);
+
+//mapについて
+// map を使用するべきでないのは以下の場合。
+// 返された配列を使用しない場合
+// コールバックから値を返さない場合
+// 配列全てに関数を実行して、返した値で配列を作成する
+// mapを２重にすることで、配列のなかに配列を作ることができる
+const trans = a => a[0].map((_, ele) => a.map(r => r[ele]));
+
+//配列を指定した文字で連結する
+//1
+//2
+//3
+arr.join("\n")
+// 1 2 3
+arr.join(" ")
+//1,2,3
+arr.join()
+
+
 
 //=================文字列の操作=====================//
 const word="abcd";
